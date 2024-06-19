@@ -907,8 +907,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (button.getAttribute('listen') === 'true') return;    
                 button.setAttribute('listen', 'true');
                 button.addEventListener('click', () => {
+                 tableLink = document.querySelectorAll('table__content-cell a');
+
                   if (colorless.checked) row.classList.add('seo-added');
                   button.style.display = 'none';
+                  tableLink.style.color = "rgba(0,0,0,.5)"
                   button.nextElementSibling.style.display = 'block';
                   var phrase = button.parentElement.children[2].innerText;
                   var count = button.parentElement.nextElementSibling.innerText;
