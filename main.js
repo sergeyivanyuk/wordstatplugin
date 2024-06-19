@@ -886,10 +886,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var observer = new MutationObserver(elem => {
     elem.forEach(e => {
       if (e.addedNodes.length > 0) {
-        if (document.querySelectorAll('.b-word-statistics__table').length > 0) {
+        if (document.querySelectorAll('.table__wrapper').length > 0) {
           if (document.querySelectorAll('.ex-seo_add-all').length > 0) return;
           observer.disconnect();
-          document.querySelectorAll('.b-word-statistics__table, table__wrapper').forEach(table => {
+          document.querySelectorAll('.table__wrapper').forEach(table => {
             table.insertAdjacentHTML('beforebegin', `<div class='ex-seo_add-all'>Добавить все</div>`);
             table.parentElement.querySelector('.ex-seo_add-all').addEventListener('click', () => {
               [...table.children[0].children].forEach((row, index) => {
@@ -907,11 +907,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (button.getAttribute('listen') === 'true') return;    
                 button.setAttribute('listen', 'true');
                 button.addEventListener('click', () => {
-                 tableLink = document.querySelectorAll('table__content-cell a');
-
                   if (colorless.checked) row.classList.add('seo-added');
                   button.style.display = 'none';
-                  tableLink.style.color = "rgba(0,0,0,.5)"
                   button.nextElementSibling.style.display = 'block';
                   var phrase = button.parentElement.children[2].innerText;
                   var count = button.parentElement.nextElementSibling.innerText;
