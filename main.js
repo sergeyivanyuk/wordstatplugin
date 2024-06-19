@@ -913,7 +913,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   var phrase = button.parentElement.children[2].innerText;
                   var count = button.parentElement.nextElementSibling.innerText;
                   document.querySelector('#ex-seo_added-words-list').insertAdjacentHTML('beforeend',
-                    `<div style="display:flex;align-items:end;"><div style="width:80%;">${removePlus.checked ? phrase.replaceAll('+', '') : phrase}</div><div style="margin-left:5px;">(${count})</div></div>`)
+                    `<div style="display:flex;align-items:end;"><div style="width:55%; text-align:center;">${removePlus.checked ? phrase.replaceAll('+', '') : phrase}</div><div style="margin-left:5px;">(${count})</div></div>`)
                   calcAdded();
                 })
               });
@@ -947,7 +947,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var countPhrases = document.querySelector('#ex-seo_added-words-list').children.length;
     var countSearch = 0;
     [...document.querySelector('#ex-seo_added-words-list').children].forEach(item => {
-      countSearch += Number(item.children[1].innerText.replace('(', '').replace(')', '').replaceAll(/\u00a0/g, ''))
+      countSearch += Number(item.children[1].innerText.replace('(', ' ').replace(')', ' ').replaceAll(/\u00a0/g, ''))
     })
     document.querySelector('#ex-seo_added-words-count_words').innerText = countPhrases;
     document.querySelector('#ex-seo_added-words-count_count').innerText = countSearch;
