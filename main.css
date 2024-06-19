@@ -1,5 +1,5 @@
 #ex-seo {
-  position: absolute;
+  position: fixed;
   z-index: 9;
   background-color: #fff;
   border: 1px solid #d3d3d3;
@@ -54,14 +54,14 @@
 }
 
 #ex-seo_added-words {
-  position: absolute;
+  position: fixed;
   z-index: 9;
   background-color: #fff;
   border: 2px solid #d3d3d3;
   text-align: center;
-  width: 16%;
+  width: 13%;
   top: 135px;
-  left: 1%;
+  left: .5%;
   height: 350px;
 }
 

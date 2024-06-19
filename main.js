@@ -730,7 +730,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
     <div id="ex-seo_added-words">
-      <div id="ex-seo_added-words-header"><div style="padding-left:60px;">Head of SEO tools 1.1</div><div id="ex-seo_show-settings" style="margin-right: 10px;cursor:pointer;">${settingsSvg}</div></div>
+      <div id="ex-seo_added-words-header"><div style="padding-left:40px;">Head of SEO tools 1.1</div><div id="ex-seo_show-settings" style="margin-right: 10px;cursor:pointer;">${settingsSvg}</div></div>
       <div id="ex-seo_added-words-actions">
         <div id="ex-copy" title="Копировать без частот">${copySvg}</div>
         <div id="ex-copy-search" title="Копировать с частотами">${copySearchSvg}</div>
@@ -889,7 +889,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (document.querySelectorAll('.b-word-statistics__table').length > 0) {
           if (document.querySelectorAll('.ex-seo_add-all').length > 0) return;
           observer.disconnect();
-          document.querySelectorAll('.b-word-statistics__table').forEach(table => {
+          document.querySelectorAll('.b-word-statistics__table, table__wrapper').forEach(table => {
             table.insertAdjacentHTML('beforebegin', `<div class='ex-seo_add-all'>Добавить все</div>`);
             table.parentElement.querySelector('.ex-seo_add-all').addEventListener('click', () => {
               [...table.children[0].children].forEach((row, index) => {
