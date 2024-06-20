@@ -913,7 +913,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   var phrase = button.parentElement.children[2].innerText;
                   var count = button.parentElement.nextElementSibling.innerText;
                   document.querySelector('#ex-seo_added-words-list').insertAdjacentHTML('beforeend',
-                    `<div style="display:flex;align-items:end;"><div style="width:55%; text-align:center;">${removePlus.checked ? phrase.replaceAll('+', '') : phrase}</div><div style="margin-left:5px;">(${count})</div></div>`)
+                    `<div style="display:flex;align-items:end; margin:5px"><div style="width:60%;">${removePlus.checked ? phrase.replaceAll('+', '') : phrase}</div><div style="margin-left:5px;">(${count})</div></div>`)
                   calcAdded();
                 })
               });
